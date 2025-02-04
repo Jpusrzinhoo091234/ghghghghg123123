@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <h1>Minha Loja <i class="fas fa-shopping-cart"></i></h1>
+            </div>
+            <div class="header-actions">
+                <a href="#" class="social-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon instagram-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <button onclick="filterProducts('all')" class="nav-btn active">
+                <i class="fas fa-border-all"></i> Todos
+            </button>
+            <button onclick="filterProducts('assinaturas')" class="nav-btn">
+                <i class="fas fa-tv"></i> Assinaturas
+            </button>
+            <button onclick="filterProducts('anime_fighter')" class="nav-btn">
+                <i class="fas fa-gamepad"></i> Anime Fighter
+            </button>
+            <button onclick="filterProducts('free_fire')" class="nav-btn">
+                <i class="fas fa-fire"></i> Free Fire
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <div class="filters">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Buscar produtos...">
+                </div>
+                <select id="sort-select">
+                    <option value="default">Ordenar por</option>
+                    <option value="price-asc">Menor preço</option>
+                    <option value="price-desc">Maior preço</option>
+                    <option value="name">Nome</option>
+                </select>
+            </div>
+
+            <div id="products-container" class="products-grid"></div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre Nós</h4>
+                    <p>Sua loja de confiança com os melhores produtos e preços do mercado.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <a href="#" onclick="sendSupportMessage()" class="contact-link">
+                        <i class="fab fa-whatsapp"></i> (24) 98182-7333
+                    </a>
+                    <a href="https://www.instagram.com/diario_duo._.ff/" target="_blank" class="contact-link">
+                        <i class="fab fa-instagram"></i> @diario_duo._.ff
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h4>Horário de Atendimento</h4>
+                    <p>Segunda a Sábado: 8h às 20h</p>
+                    <p>Domingo: 9h às 18h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Angels Store. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/products.js"></script>
+</body>
+</html>
